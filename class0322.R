@@ -34,7 +34,7 @@ dex03$BMI <-round(dex03$Weight/(dex03$Height/100)^2,2)
 View(dex03)
 
 #資料篩選 
-#第二個參數是要搜尋的列index
+#第二個參數是要搜尋列的index
 lowBMI <- dex03[dex03$BMI < 20,]
 lowBMI
 nrow(lowBMI)
