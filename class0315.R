@@ -12,11 +12,13 @@ v2<-seq(3,10,by=5)
 v3<-seq(3,10,length)
 v4<-rep(c(3:6),time=3,each=2)
 
-#因長度不足，會自動補足
+#因v2長度不足，會自動補足
 #v1 = 1 2 3 4 5
 #v2 = 3 8 3 8 3
 res1 <- v1 + v2 
+res1
 
+#相加上去
 sum(v1)
 #相乘上去
 prod(v1)
@@ -37,6 +39,8 @@ any(x<5)
 
 #字串結合
 c("abc","efg","hij")
+label <- paste(c("abc","efg","hij"),1:10,sep = ',')
+print(label)
 label <- paste(c("X","Y"),1:10,sep = ',')
 print(label)
 
@@ -81,6 +85,6 @@ y<-factor(x)
 print(y)
 
 #list
-
 list1 <- list(a=1,e=c('A','B'))
+list1
 list1$e

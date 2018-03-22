@@ -58,10 +58,16 @@ str(dex03)
 #查看是否有空資料
 any(is.na)
 any(is.na(dex03))
+#查看有幾個空資料跟沒空的資料
+table(complete.cases((dex03)))
+#列出空資料的位址
+dex03_na = dex03[!complete.cases(dex03),]
+dex03_na
 write.xlsx(dex03,'0322output.xlsx',sheetName = "包含Height_Level(自動分類)" , append = TRUE)
 
 
 #read Url Data
-url<- 'http://www.ktec.gov.tw/ktec_api.php?type=csv'
-dataFromUrl <- read.csv(url,header = TRUE,sep=',')
-
+url<- 'http://research.fsc.gov.tw/fsd/fncl_od.asp?opendata=FSF024'
+dataFromUrl <- read.csv("政府資料＿股票.csv",header = TRUE,sep=',')
+table(complete.cases(dataFromUrl))
+dataFromUrl
